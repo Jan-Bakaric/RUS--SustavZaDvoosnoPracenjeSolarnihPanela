@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "author": "",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -18.6, "left": 34.8, "attrs": {} },
+    { "type": "wokwi-power", "id": "5v", "top": 0, "left": 160, "attrs": { "voltage": "5V" } },
+    { "type": "wokwi-ground", "id": "gnd", "top": 0, "left": -160, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -361.6,
+      "left": -104.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr2",
+      "top": -352,
+      "left": 346.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr3",
+      "top": -198.4,
+      "left": -95.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr4",
+      "top": -198.4,
+      "left": 317.6,
+      "attrs": {}
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -587.6, "left": -9.6, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": -529,
+      "left": 270.6,
+      "rotate": 270,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "ldr1:VCC", "mega:5V", "red", [ "h0" ] ],
+    [ "ldr2:VCC", "mega:5V", "red", [ "h0" ] ],
+    [ "ldr2:GND", "mega:GND.1", "black", [ "h0" ] ],
+    [ "ldr3:VCC", "mega:5V", "red", [ "h0" ] ],
+    [ "ldr3:GND", "mega:GND.1", "black", [ "h0" ] ],
+    [ "ldr4:VCC", "mega:5V", "red", [ "h0" ] ],
+    [ "ldr4:GND", "mega:GND.1", "black", [ "h0" ] ],
+    [ "servo1:GND", "mega:GND.1", "black", [ "h0" ] ],
+    [ "servo2:GND", "mega:GND.1", "black", [ "h0" ] ],
+    [ "servo1:V+", "mega:5V", "green", [ "h0" ] ],
+    [ "servo2:V+", "mega:5V", "green", [ "h0" ] ],
+    [ "servo1:PWM", "mega:9", "blue", [ "h0" ] ],
+    [ "servo2:PWM", "mega:10", "blue", [ "h0" ] ],
+    [ "ldr1:GND", "mega:GND.1", "black", [ "h0" ] ],
+    [ "ldr1:AO", "mega:A0", "green", [ "h0" ] ],
+    [ "mega:A1", "ldr2:AO", "green", [ "v0" ] ],
+    [ "ldr3:AO", "mega:A2", "green", [ "h0" ] ],
+    [ "ldr4:AO", "mega:A3", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
