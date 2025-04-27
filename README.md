@@ -1,4 +1,4 @@
-# Sustav-za-dvoosno-pracenje-solarnih-panela
+# Sustav za dvoosno praćenje solarnih panela
 
 ## Opis projekta
 
