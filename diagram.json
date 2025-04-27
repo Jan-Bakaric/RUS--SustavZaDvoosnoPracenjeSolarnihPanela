@@ -42,6 +42,20 @@
       "left": 270.6,
       "rotate": 270,
       "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -454.8,
+      "left": -149.8,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -61,
+      "left": 528,
+      "attrs": { "color": "yellow", "xray": "1" }
     }
   ],
   "connections": [
@@ -62,7 +76,11 @@
     [ "ldr1:AO", "mega:A0", "green", [ "h0" ] ],
     [ "mega:A1", "ldr2:AO", "green", [ "v0" ] ],
     [ "ldr3:AO", "mega:A2", "green", [ "h0" ] ],
-    [ "ldr4:AO", "mega:A3", "green", [ "h0" ] ]
+    [ "ldr4:AO", "mega:A3", "green", [ "h0" ] ],
+    [ "led1:A", "mega:13", "green", [ "v0" ] ],
+    [ "led1:C", "mega:GND.1", "black", [ "v0" ] ],
+    [ "btn1:1.l", "mega:2", "green", [ "h0" ] ],
+    [ "btn1:2.l", "mega:GND.1", "black", [ "h0" ] ]
   ],
   "dependencies": {}
 }
