@@ -1,0 +1,25 @@
+var project_8c =
+[
+    [ "enterSleepMode", "project_8c.html#aa9118fcc53fc3a9ba93842858201533a", null ],
+    [ "loop", "project_8c.html#afe461d27b9c48d5921c00d521181f12f", null ],
+    [ "setup", "project_8c.html#a4fc01d736fe50cf5b977f755b675f11d", null ],
+    [ "toggleSystem", "project_8c.html#a21fe2514cf4cd169b2ffa88f1686a8a4", null ],
+    [ "buttonPin", "project_8c.html#a4ddb8b6ae564eb22f7c74f2683a63b8e", null ],
+    [ "debounceDelay", "project_8c.html#a7d466b68c5e24096e6bcd063f3ab8736", null ],
+    [ "lastInterruptTime", "project_8c.html#ac0dc20630baf25bdff1f2b0137f3f565", null ],
+    [ "LDR1Pin", "project_8c.html#ae74b1d11419ed0cde7abf9addd0a82df", null ],
+    [ "ldr1Value", "project_8c.html#a224ad744876496f55db15c08671daf79", null ],
+    [ "LDR2Pin", "project_8c.html#a8493821bcee9c9bf05513f09b4138572", null ],
+    [ "ldr2Value", "project_8c.html#a348a78382ca55bf3c8d1894b33aa5e6c", null ],
+    [ "LDR3Pin", "project_8c.html#a9f83f0e4a6d80fab4e449e65fc0b0285", null ],
+    [ "ldr3Value", "project_8c.html#ac93d6af8a32e8d4196003674e5acd77a", null ],
+    [ "LDR4Pin", "project_8c.html#a30579de033a4ad2eab304d03404b7d11", null ],
+    [ "ldr4Value", "project_8c.html#ab1e092bb99a01e84d0a4b81eaacef9bc", null ],
+    [ "ledPin", "project_8c.html#a2cd9f0d96c9cd0637798de3baa7aee60", null ],
+    [ "servo1", "project_8c.html#ac5d2bea44c6318454db0e2639a4efe95", null ],
+    [ "servo1Pin", "project_8c.html#a02f13a51c33381bbde315463a8652de1", null ],
+    [ "servo2", "project_8c.html#a6458146b8e54c3729bbee8c037921c72", null ],
+    [ "servo2Pin", "project_8c.html#af5d6a9ee4bec8e76b8cf100055a9e1f7", null ],
+    [ "systemOn", "project_8c.html#a6fa862633d858cc6a62607119fae5059", null ],
+    [ "toggleRequested", "project_8c.html#a0c57fe32877554d86048f70b1b1b5cec", null ]
+];
