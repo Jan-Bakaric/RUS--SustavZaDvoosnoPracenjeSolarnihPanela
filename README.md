@@ -29,7 +29,7 @@ Ovaj projekt simulira dvoosno praćenje solarnih panela koristeći Arduino Mega 
 | Servo 1 | 9 |
 | Servo 2 | 10 |
 
-![Slilka spoja](./SlikaSpoja.png)
+![Slika spoja](./SlikaSpoja.png)
 
 ## Instalacija
 
