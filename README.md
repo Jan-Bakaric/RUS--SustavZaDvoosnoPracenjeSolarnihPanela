@@ -45,6 +45,7 @@ Ovaj projekt simulira dvoosno praćenje solarnih panela koristeći Arduino Mega 
 - 2 servo motora
 - Prekidač (tipkalo)
 - LED dioda
+- Breadboard ploča
 - Otpornici za LDR senzore (po potrebi)
 
 ### Kako koristiti
