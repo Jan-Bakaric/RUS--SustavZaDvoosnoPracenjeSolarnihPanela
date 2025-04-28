@@ -35,7 +35,7 @@ Ovaj projekt simulira dvoosno praćenje solarnih panela koristeći Arduino Mega 
 
 ### Za korištenje projekta u simulaciji, kliknite ovdje:
 
-###[*Sustav za dvoosno praćenje solarnih panela*](https://wokwi.com/projects/429448946340375553)
+[*Sustav za dvoosno praćenje solarnih panela*](https://wokwi.com/projects/429448946340375553)
 
 ### Kako biste koristili ovaj projekt u realnom okruženju, morate imati sljedeće:
 - Arduino IDE
