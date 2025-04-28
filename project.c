@@ -43,33 +43,48 @@ const int buttonPin = 2;
  */
 const int ledPin = 13;
 
-/** 
- * @name Istanciranje servoa
- * @{
+/**
+ * @brief Instanciranje prvog servoa
  */
 Servo servo1;
+/**
+ * @brief Instanciranje drugog servoa
+ */
 Servo servo2;
-/** @} */
 
-/** 
- * @name Varijable za očitanje LDR-a
- * @{
+/**
+ * @brief Varijabla za očitanje prvog LDR-a
  */
 int ldr1Value = 0;
+/**
+ * @brief Varijabla za očitanje drugog LDR-a
+ */
 int ldr2Value = 0;
+/**
+ * @brief Varijabla za očitanje trećeg LDR-a
+ */
 int ldr3Value = 0;
+/**
+ * @brief Varijabla za očitanje četvrtog LDR-a
+ */
 int ldr4Value = 0;
-/** @} */
 
-/** 
- * @name Varijable za stanje sustava i debounce logiku
- * @{
+/**
+ * @brief Varijabla za stanje sustava
  */
 volatile bool systemOn = false;
+/**
+ * @brief Varijabla za traženje mijenjanja sustava (ON/OFF)
+ */
 volatile bool toggleRequested = false;
+/**
+ * @brief Varijabla za pohranu vremena zadnjeg prekida
+ */
 volatile unsigned long lastInterruptTime = 0;
+/**
+ * @brief Varijabla za postavljanje kašnjenja debounce logike
+ */
 const unsigned long debounceDelay = 200; 
-/** @} */
 
 /**
  * @brief Setup se izvodi pri pokretanju simulacije
