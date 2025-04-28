@@ -35,9 +35,9 @@ Ovaj projekt simulira dvoosno praćenje solarnih panela koristeći Arduino Mega 
 
 ### Za korištenje projekta u simulaciji, kliknite ovdje:
 
-####*link na projekt*
+####[*Sustav za dvoosno praćenje solarnih panela*](https://wokwi.com/projects/429448946340375553)
 
-### Da biste koristili ovaj projekt u realnom okruženju, morate imati sljedeće:
+### Kako biste koristili ovaj projekt u realnom okruženju, morate imati sljedeće:
 - Arduino IDE
 - Biblioteka Servo instalirana u Arduino IDE-u
 - Arduino Mega 2560
