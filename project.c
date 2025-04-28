@@ -2,45 +2,90 @@
 #include <avr/sleep.h>
 #include <avr/interrupt.h>
 
+/**
+ * @file project.c
+ * @brief Simulira promjenu položaja solarnih panela relativno položaju Sunca
+ */
+
 // Definicija pinova
-const int LDR1Pin = A0;  // Pin na koji je spojen prvi LDR
-const int LDR2Pin = A1;  // Pin na koji je spojen drugi LDR
-const int LDR3Pin = A2;  // Pin na koji je spojen treći LDR
-const int LDR4Pin = A3;  // Pin na koji je spojen četvrti LDR
+/**
+ * @brief Pin na koji je spojen prvi LDR
+ */
+const int LDR1Pin = A0;
+/**
+ * @brief Pin na koji je spojen drugi LDR
+ */
+const int LDR2Pin = A1;
+/**
+ * @brief Pin na koji je spojen treći LDR
+ */
+const int LDR3Pin = A2;
+/**
+ * @brief Pin na koji je spojen četvrti LDR
+ */
+const int LDR4Pin = A3;
 
-const int servo1Pin = 9; // PWM pin za prvi servo
-const int servo2Pin = 10; // PWM pin za drugi servo
+/**
+ * @brief PWM pin za prvi servo
+ */
+const int servo1Pin = 9;
+/**
+ * @brief PWM pin za drugi servo
+ */
+const int servo2Pin = 10;
 
-const int buttonPin = 2;  // Pin na koji je spojeno tipkalo (prekid)
-const int ledPin = 13;    // Pin za LED-icu
+/**
+ * @brief Pin na koji je spojeno tipkalo (prekid)
+ */
+const int buttonPin = 2;
+/**
+ * @brief Pin za LED-icu
+ */
+const int ledPin = 13;
 
+/** 
+ * @name Istanciranje servoa
+ * @{
+ */
 Servo servo1;
 Servo servo2;
+/** @} */
 
-// Varijable za očitanje LDR-a
+/** 
+ * @name Varijable za očitanje LDR-a
+ * @{
+ */
 int ldr1Value = 0;
 int ldr2Value = 0;
 int ldr3Value = 0;
 int ldr4Value = 0;
+/** @} */
 
-// Varijable za stanje sustava i debounce logiku
+/** 
+ * @name Varijable za stanje sustava i debounce logiku
+ * @{
+ */
 volatile bool systemOn = false;
 volatile bool toggleRequested = false;
 volatile unsigned long lastInterruptTime = 0;
 const unsigned long debounceDelay = 200; 
+/** @} */
 
+/**
+ * @brief Setup se izvodi pri pokretanju simulacije
+ */
 void setup() {
   // Pokretanje serijske komunikacije
   Serial.begin(9600);
-
-  // Inicijalizacija servo-a
+  
+  // Inicijalizacija servoa
   servo1.attach(servo1Pin);
   servo2.attach(servo2Pin);
   
-  // Postavljanje početnih pozicija servo-a
+  // Postavljanje početnih pozicija servoa
   servo1.write(90); // 90 je početni položaj (središnji)
   servo2.write(90); // 90 je početni položaj (središnji)
-
+  
   pinMode(buttonPin, INPUT_PULLUP); 
   pinMode(ledPin, OUTPUT);
 
@@ -48,6 +93,9 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(buttonPin), toggleSystem, FALLING);
 }
 
+/**
+ * @brief Glavni programski loop
+ */
 void loop() {
   // Provjerava je li traženo mijenjanje stanja sustava (ON/OFF)
   if (toggleRequested) {
@@ -127,7 +175,9 @@ void loop() {
   delay(1000);
 }
 
-// Funkcija koja se poziva kod prekida
+/**
+ * @brief Funkcija koja se poziva kod prekida
+ */
 void toggleSystem() {
   unsigned long currentTime = millis();
   if (currentTime - lastInterruptTime > debounceDelay) {
@@ -136,7 +186,9 @@ void toggleSystem() {
   }
 }
 
-// Funkcija za ulazak u sleep mode
+/**
+ * @brief Funkcija za ulazak u sleep mode
+ */
 void enterSleepMode() {
   ADCSRA &= ~(1 << ADEN); // Isključi ADC (Analog to Digital Converter) - zbog funkcije analogRead()
 
